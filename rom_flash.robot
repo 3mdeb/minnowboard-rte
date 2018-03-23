@@ -13,7 +13,6 @@ Resource    keywords.robot
 *** Test Cases ***
 
 FLASH1.1 Minnowboard ROM flash test
-    SSHLibrary.Execute Command    /root/robot-mwb/rte-gpio-init-mwb.sh
     SSHLibrary.Put File    ${ROM_file}    /root/robot-mwb/${ROM_file}
     SSHLibrary.Execute Command    echo 0 > /sys/class/gpio/gpio199/value
     Sleep    1s
